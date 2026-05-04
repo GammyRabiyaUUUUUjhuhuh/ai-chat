@@ -7,7 +7,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from ollamafreeapi import OllamaFreeAPI
 
 # ================= НАСТРОЙКА ПРИЛОЖЕНИЯ =================
-app = Flask(__name__, static_folder=".")
+app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
 
 # Инициализация клиента AI
