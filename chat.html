@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wan Shi Tong's Library - Чат</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="chat-page">
+    <!-- Боковая панель с историей -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-small"></div>
+            <h3>Library</h3>
+        </div>
+        
+        <button class="new-chat-btn" onclick="newChat()">New Chat</button>
+        
+        <div class="chat-history" id="chatHistory">
+            <!-- История чатов загружается сюда -->
+        </div>
+        
+        <div class="user-info">
+            <span id="usernameDisplay"></span>
+            <button onclick="logout()" class="logout-btn">Log Out</button>
+        </div>
+    </div>
+   
+    <!-- Основная область чата -->
+    <div class="main-chat">
+        <div class="chat-header">
+            <h2 id="chatTitle">Wan Shi Tong's Library</h2>
+            <span class="status">WAN SHI TONG IS LISTENING</span>
+        </div>
+        
+        <div class="messages" id="messages">
+            <div class="welcome-message">
+                <div class="spirit-icon"></div>
+                <h3>Ask the Spirit of Knowledge</h3>
+                <p>I know ten thousand things. Ask me anything.</p>
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <div class="input-container">
+                <input type="text" id="messageInput" placeholder="Ask the spirit..." autocomplete="off">
+                <button class="send-btn" onclick="sendMessage()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="model-info">GPT-5.4</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

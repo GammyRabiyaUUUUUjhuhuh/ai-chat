@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wan Shi Tong's Library - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="logo">
+            <div class="book-icon"></div>
+            <h1>Wan Shi Tong's Library</h1>
+            <p class="subtitle">He who knows ten thousand things</p>
+        </div>
+        
+        <div class="auth-tabs">
+            <button class="tab-btn active" onclick="showLogin()">Login</button>
+            <button class="tab-btn" onclick="showRegister()">Register</button>
+        </div>
+        
+        <form id="loginForm" class="auth-form">
+            <input type="text" id="loginUsername" placeholder="Username" required autocomplete="username">
+            <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password">
+            <button type="submit" class="primary-btn">Sign in</button>
+        </form>
+        
+        <form id="registerForm" class="auth-form" style="display:none;">
+            <input type="text" id="regUsername" placeholder="Username" required autocomplete="username">
+            <input type="password" id="regPassword" placeholder="Password" required autocomplete="new-password">
+            <input type="password" id="regPasswordConfirm" placeholder="Repeat Password" required autocomplete="new-password">
+            <button type="submit" class="primary-btn">Create account</button>
+        </form>
+        
+        <div id="errorMsg" class="error-msg"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
