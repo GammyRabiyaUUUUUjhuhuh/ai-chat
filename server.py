@@ -49,6 +49,13 @@ def init_db():
     conn.close()
 
 init_db()
+@app.route('/<path:filename>')
+def serve_static(filename):
+    if os.path.exists(filename):
+        return send_from_directory('.', filename)
+    return "File not found", 404
+
+MODEL = "gpt-oss:20b" 
 
 # ================= МАРШРУТЫ =================
 @app.route("/")
